@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:35:36 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/12 13:05:50 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:37:26 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const char	*src1;
 	int			dir;
 
-	dest1 = (char *)dest;
-	src1 = (char *)src;
+	dest1 = dest;
+	src1 = src;
 	dir = ft_direction(dest, src, n);
 	if (dir == 0)
 		return (ft_memcpy(dest, src, n));
@@ -45,5 +45,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			n--;
 		}
 	}
-	return (dest);
+	return (dest1);
 }

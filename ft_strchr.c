@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 09:19:19 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/12 13:28:59 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:16:48 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 	char	*s1;
 
-	i = -1;
+	i = 0;
 	s1 = (char *)s;
 	while (s1[i] != '\0')
 	{
-		i++;
 		if (s1[i] == c)
 			return (&s1[i]);
+		i++;
 	}
+	if (s1[i] == c)
+		return (&s1[i]);
 	return (NULL);
 }
