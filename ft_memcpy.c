@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:46:28 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/12 12:25:39 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:28:24 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest1 = dest;
 	src1 = src;
 	i = 0;
-	while (i++ < n)
+	while (i < n)
 	{
 		dest1[i] = src1[i];
 		i++;
