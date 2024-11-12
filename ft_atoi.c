@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:00:26 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/12 15:23:08 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:24:07 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-int	main(void)
-{
-
