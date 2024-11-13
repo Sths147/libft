@@ -34,6 +34,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	dest1 = dest;
 	src1 = src;
+	if (!dest && !src)
+		return (NULL);
 	dir = ft_direction(dest, src, n);
 	if (dir == 0)
 		return (ft_memcpy(dest, src, n));
