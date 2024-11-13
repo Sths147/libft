@@ -34,12 +34,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 
 	i = 0;
-	while (ft_is_in_set(s1[i], set) == 1)
+	while (s1[i] && ft_is_in_set(s1[i], set))
 		i++;
 	j = ft_strlen(s1) - 1;
-	while (ft_is_in_set(s1[j], set) == 1)
+	while (j > i && ft_is_in_set(s1[j], set))
 		j--;
-	result = (char *)malloc((j - i + 1) * sizeof(char));
+	result = (char *)malloc((j - i + 2) * sizeof(char));
 	if (!result)
 		return (NULL);
 	k = 0;
