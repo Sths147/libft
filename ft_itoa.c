@@ -66,6 +66,8 @@ char	*ft_itoa(int n)
 
 	n1 = (long)n;
 	result = ft_alloc_itoa(n);
+	if (!result)
+		return (NULL);
 	count = ft_count_letters(n) - 1;
 	i = 0;
 	if (n1 < 0)

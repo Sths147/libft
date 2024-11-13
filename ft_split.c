@@ -49,24 +49,22 @@ static char	*ft_strdup_custom(char const *s1, int start, int end)
 	return (result);
 }
 
-static void	ft_free(char **tab, int count)
+static char	**ft_free(char **tab, int count)
 {
-	int	i;
-
-	i = 0;
-	while (i < count)
+	while (count >= 0)
 	{
-		free(tab[i]);
-		i++;
+		free(tab[count]);
+		count--;
 	}
 	free(tab);
+	return (NULL);
 }
 
-static char	**ft_malloc_tab(char const *s, char c)
+static char	**ft_malloc_tab(int d)
 {
 	char	**tab;
 
-	tab = malloc((ft_words(s, c) + 1) * sizeof(char *));
+	tab = malloc(d * sizeof(char *));
 	if (!tab)
 		return (NULL);
 	return (tab);
@@ -79,10 +77,10 @@ char	**ft_split(char const *s, char c)
 	int		count;
 	char	**result;
 
-	result = ft_malloc_tab(s, c);
+	result = ft_malloc_tab(ft_words(s, c) + 1);
 	i = 0;
-	count = 0;
-	while (s[i])
+	count = -1;
+	while (s[i] && result)
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
@@ -91,13 +89,13 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (i > start)
 		{
-			result[count] = ft_strdup_custom(s, start, i);
+			result[++count] = ft_strdup_custom(s, start, i);
 			if (result[count] == NULL)
-				ft_free(result, count);
-			count++;
+				return (ft_free(result, count));
 		}
 	}
-	result[count] = NULL;
+	if (result)
+		result[++count] = NULL;
 	return (result);
 }
 /*
@@ -117,4 +115,5 @@ int	main(void)
 	while (result[i] != NULL)
 		printf("%s\n", result[i++]);
 	return (0);
-}*/
+}
+*/
