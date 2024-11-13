@@ -6,7 +6,7 @@
 #    By: sithomas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2024/11/12 14:12:44 by sithomas         ###   ########.fr        #
+#    Updated: 2024/11/13 17:22:05 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,15 @@ SRC = ft_isalpha.c \
       ft_putchar_fd.c \
       ft_putstr_fd.c \
       ft_putendl_fd.c \
-      ft_putnbr_fd.c
+      ft_putnbr_fd.c \
+      ft_lstnew_bonus.c \
+      ft_lstadd_front_bonus.c \
+      ft_lstlast_bonus.c \
+      ft_lstsize_bonus.c \
+      ft_lstadd_back_bonus.c
+
+BONUS = 
+
 
 INC = -I libft.h
 
