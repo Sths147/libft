@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:16:39 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/05 15:18:32 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:02:09 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (s[i++] != '\0')
+	while (s[i] != '\0')
+	{
 		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

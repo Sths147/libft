@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:05:43 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/05 13:51:06 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:31:50 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ static int	ft_count_letters(int n)
 	int		count;
 
 	count = 0;
+	if (n == -2147483648)
+	{
+		count += 2;
+		n = 147483648;
+	}
 	if (n < 0)
 	{
 		count++;
@@ -54,24 +59,25 @@ static char	*ft_alloc_itoa(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		count;
-	int		i;
+	char		*result;
+	int			count;
+	int			i;
+	long int	n1;
 
+	n1 = (long)n;
 	result = ft_alloc_itoa(n);
 	count = ft_count_letters(n) - 1;
 	i = 0;
-	if (n < 0)
+	if (n1 < 0)
 	{
 		result[0] = '-';
-		n *= -1;
+		n1 *= -1;
 		i++;
 	}
 	while (count >= i)
 	{
-		result[count] = n % 10 + 48;
-		n /= 10;
-		count--;
+		result[count--] = n1 % 10 + 48;
+		n1 /= 10;
 	}
 	return (result);
 }
@@ -82,7 +88,7 @@ int	main(void)
 {
 	int	n;
 
-	n = 0;
+	n = -2147483648;
 	printf("%s\n", ft_itoa(n));
 	return (0);
 }*/

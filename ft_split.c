@@ -54,8 +54,11 @@ static void	ft_free(char **tab, int count)
 	int	i;
 
 	i = 0;
-	while (i <= count)
-		free(tab[i++]);
+	while (i < count)
+	{
+		free(tab[i]);
+		i++;
+	}
 	free(tab);
 }
 

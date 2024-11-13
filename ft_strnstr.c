@@ -29,6 +29,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			{
 				if (big[i + j] != little[j])
 					break ;
+				if ((i + j) >= len)
+					return (NULL);
 				j++;
 			}
 			if (little[j] == '\0')

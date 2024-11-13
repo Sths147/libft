@@ -39,10 +39,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (ft_memcpy(dest, src, n));
 	else
 	{
-		while (n >= 0)
+		while (n > 0)
 		{
-			dest1[n] = src1[n];
 			n--;
+			dest1[n] = src1[n];
 		}
 	}
 	return (dest1);
