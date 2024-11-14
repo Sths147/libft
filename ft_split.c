@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:36:37 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/05 13:04:04 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:14:06 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,22 +98,3 @@ char	**ft_split(char const *s, char c)
 		result[++count] = NULL;
 	return (result);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	i;
-	char	**result;
-	char const	*s;
-	char	c;
-
-	s = "   Bonjour les   amis   ";
-	c = ' ';
-	result = ft_split(s, c);
-	i = 0;
-	while (result[i] != NULL)
-		printf("%s\n", result[i++]);
-	return (0);
-}
-*/

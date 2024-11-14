@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 13:05:43 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/12 16:31:50 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:14:34 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,14 +83,3 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	n;
-
-	n = -2147483648;
-	printf("%s\n", ft_itoa(n));
-	return (0);
-}*/

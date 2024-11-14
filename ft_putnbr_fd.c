@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:22:18 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/07 09:39:24 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:19:21 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + 48, fd);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd(-2134, 1);
-	ft_putnbr_fd(0, 1);
-	ft_putnbr_fd(2134, 1);
-	ft_putnbr_fd(-2147483648, 1);
-}*/

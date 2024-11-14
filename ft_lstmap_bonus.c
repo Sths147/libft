@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 11:06:02 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/14 14:45:01 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:36:33 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*last;
 	void	*cont;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	result = NULL;
 	while (lst)

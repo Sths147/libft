@@ -6,7 +6,7 @@
 /*   By: sithomas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:54:20 by sithomas          #+#    #+#             */
-/*   Updated: 2024/11/05 13:03:41 by sithomas         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:13:23 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[k] = '\0';
 	return (result);
 }
-/*
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char const *s1 = "  Yo les gars  !    ";
-	char const *set = "\0";
-
-	printf("%s\n", ft_strtrim(s1, set));
-
-	return (0);
-}*/
