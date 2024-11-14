@@ -6,7 +6,7 @@
 #    By: sithomas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2024/11/13 17:22:05 by sithomas         ###   ########.fr        #
+#    Updated: 2024/11/14 15:03:59 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,22 +48,30 @@ SRC = ft_isalpha.c \
       ft_putstr_fd.c \
       ft_putendl_fd.c \
       ft_putnbr_fd.c \
-      ft_lstnew_bonus.c \
-      ft_lstadd_front_bonus.c \
-      ft_lstlast_bonus.c \
-      ft_lstsize_bonus.c \
-      ft_lstadd_back_bonus.c
 
-BONUS = 
+BONUS = ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c
 
 
-INC = -I libft.h
+INC = libft.h
 
 OFILES = $(SRC:.c=.o)
+
+OBONUS = $(BONUS:.c=.o)
 
 NAME = libft.a
 
 all: $(NAME)
+
+bonus: $(OFILES) $(OBONUS)
+	ar rcs $(NAME) $(OBONUS) $(OFILES)
 
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES) 
@@ -72,7 +80,7 @@ $(NAME): $(OFILES)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OFILES)
+	rm -f $(OFILES) $(OBONUS)
 
 fclean: clean
 	rm -f $(NAME)
