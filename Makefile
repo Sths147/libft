@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sithomas <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: sithomas <sithomas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2024/11/14 15:03:59 by sithomas         ###   ########.fr        #
+#    Updated: 2024/11/22 12:27:33 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,13 +70,16 @@ NAME = libft.a
 
 all: $(NAME)
 
-bonus: $(OFILES) $(OBONUS)
+bonus: .bonus
+
+.bonus : $(OFILES) $(OBONUS)
+	@touch .bonus 
 	ar rcs $(NAME) $(OBONUS) $(OFILES)
 
 $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES) 
 
-%.o : %.c
+%.o : %.c $(INC)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -87,4 +90,4 @@ fclean: clean
 
 re:	fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
