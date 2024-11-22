@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2024/11/22 12:27:33 by sithomas         ###   ########.fr        #
+#    Updated: 2024/11/22 16:44:26 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ $(NAME): $(OFILES)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OFILES) $(OBONUS)
+	rm -f $(OFILES) $(OBONUS) .bonus
 
 fclean: clean
 	rm -f $(NAME)
