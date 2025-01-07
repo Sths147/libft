@@ -6,7 +6,7 @@
 /*   By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:18:19 by sithomas          #+#    #+#             */
-/*   Updated: 2025/01/07 12:59:11 by sithomas         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:09:06 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!new)
+		return ;
 	if (!lst || !(*lst))
 	{
 		lst = &new;
