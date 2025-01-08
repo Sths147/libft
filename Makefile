@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2025/01/06 18:17:53 by sithomas         ###   ########.fr        #
+#    Updated: 2025/01/08 13:53:33 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,19 +70,22 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OFILES)
-	$(MAKE) -C printf
-	cp printf/*.o .
-	ar rcs $(NAME) *.o
+	@$(MAKE) -C printf
+	@cp printf/*.o .
+	@ar rcs $(NAME) *.o
+	@echo 'libft.a created'
 
 %.o : %.c $(INC)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(MAKE) fclean -C printf
-	rm -f *.o get_next_line/*.o ft_printf/*.o
+	@$(MAKE) fclean -C printf
+	@rm -f *.o get_next_line/*.o ft_printf/*.o
+	@echo 'libft objs cleaned'
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo 'libft all cleaned'
 
 re:	fclean all
 
