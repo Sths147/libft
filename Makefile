@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2025/01/08 13:56:46 by sithomas         ###   ########.fr        #
+#    Updated: 2025/01/08 14:22:11 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,6 @@ SRC = ft_isalpha.c \
 	get_next_line/get_next_line_utils.c \
 
 INC = libft.h \
-	ft_printf/ft_printf.h \
 
 OFILES = $(SRC:.c=.o)
 
@@ -70,16 +69,16 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OFILES)
-	@$(MAKE) -C printf
+	@$(MAKE) -s -C printf
 	@cp printf/*.o .
 	@ar rcs $(NAME) *.o
 	@echo 'libft.a created'
 
-%.o : %.c $(INC)
+%.o: %.c $(INC)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(MAKE) fclean -C printf
+	@$(MAKE) fclean -s -C printf
 	@rm -f *.o get_next_line/*.o ft_printf/*.o
 	@echo 'libft objs cleaned'
 
