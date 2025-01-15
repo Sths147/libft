@@ -6,7 +6,7 @@
 /*   By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:03:15 by sithomas          #+#    #+#             */
-/*   Updated: 2025/01/06 15:42:54 by sithomas         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:33:07 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <unistd.h>
 # include "printf/ft_printf.h" 
-
 
 typedef struct s_list
 {
