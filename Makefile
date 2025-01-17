@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2025/01/08 14:22:11 by sithomas         ###   ########.fr        #
+#    Updated: 2025/01/17 14:53:51 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ $(NAME): $(OFILES)
 	@$(MAKE) -s -C printf
 	@cp printf/*.o .
 	@ar rcs $(NAME) *.o
+	@ranlib $(NAME)
 	@echo 'libft.a created'
 
 %.o: %.c $(INC)
