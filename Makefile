@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2025/01/20 11:10:40 by sithomas         ###   ########.fr        #
+#    Updated: 2025/01/20 11:27:39 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRC = ft_isalpha.c \
 	get_next_line/get_next_line_utils.c \
 
 INC = libft.h \
+	get_next_line/get_next_line.h
 
 OFILES = $(SRC:.c=.o)
 
