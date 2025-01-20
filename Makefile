@@ -6,7 +6,7 @@
 #    By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 12:41:53 by sithomas          #+#    #+#              #
-#    Updated: 2025/01/17 14:53:51 by sithomas         ###   ########.fr        #
+#    Updated: 2025/01/20 11:10:40 by sithomas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ $(NAME): $(OFILES)
 	@ranlib $(NAME)
 	@echo 'libft.a created'
 
-%.o: %.c $(INC)
+%.o: %.c $(INC) printf/*.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
