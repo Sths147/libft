@@ -6,12 +6,11 @@
 /*   By: sithomas <sithomas@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:18:56 by sithomas          #+#    #+#             */
-/*   Updated: 2025/06/20 14:56:29 by sithomas         ###   ########.fr       */
+/*   Updated: 2025/06/20 15:05:56 by sithomas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 size_t	ft_strlen(char const *s)
 {
